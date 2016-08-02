@@ -1,5 +1,5 @@
 actions
 createBranch: branchName
-	self command: {'checkout'. '-b'. branchName}.
-	self branch: branchName.
+	self backend createBranch: branchName.
+	self branchName: branchName.
 	self refresh.

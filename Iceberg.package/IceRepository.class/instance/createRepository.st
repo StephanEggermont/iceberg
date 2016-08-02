@@ -1,7 +1,10 @@
 repository handling
 createRepository
-	self repository: (IceMCGitRepository new
-		localRepository: self location;
-		remoteUrl: self origin url;
-		subdirectory: (self subdirectory ifNil: '');
-		readonly: false).
+	repository := (self storageClass 
+		newRepositoryAt: self location
+		origin: self origin
+		subdirectory: (self subdirectory ifNil: '')).
+		
+	branch ifNotNil: [ repository branch: self branchName ].
+	self repository: repository.
+

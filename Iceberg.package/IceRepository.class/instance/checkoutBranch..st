@@ -1,5 +1,5 @@
 actions
 checkoutBranch: branchName
-	self branch: branchName.
-	self command: {'checkout'. branchName}.
+	self branchName: branchName.
+	self repository checkoutBranch: branchName.
 	self refresh.

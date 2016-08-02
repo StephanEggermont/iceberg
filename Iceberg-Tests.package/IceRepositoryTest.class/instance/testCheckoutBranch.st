@@ -1,8 +1,11 @@
 tests
 testCheckoutBranch
-	repository command: 'branch testBranch'.
-	self assert: repository branch equals: 'master'.
+	"Prepare"
+	self gitCommand: 'branch testBranch'.
+	self assert: repository branch name equals: 'master'.
 	
+	"Exercise"
 	repository checkoutBranch: 'testBranch'.
 
-	self assert: repository branch equals: 'testBranch'
+	"Assert"
+	self assert: repository branch name equals: 'testBranch'

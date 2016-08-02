@@ -1,5 +1,5 @@
 actions
 push
-	self command: ('push origin {1}' format: {self branch}).
+	self backend push.
 	self refresh.
 	self announcer announce: IcePushed new

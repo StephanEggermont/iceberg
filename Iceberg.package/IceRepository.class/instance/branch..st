@@ -1,4 +1,4 @@
 accessing
-branch: anObject
-	branch := anObject.
-	repository ifNotNil: [ repository branch: branch ]
+branch: anIceBranch
+	branch := anIceBranch.
+	upstream := nil

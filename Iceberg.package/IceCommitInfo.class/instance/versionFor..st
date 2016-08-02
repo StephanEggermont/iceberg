@@ -1,7 +1,4 @@
-as yet unclassified
-versionFor: anIceSavedPackage 
-	^ (self versionDescriptorFor: anIceSavedPackage)
-		ifNotNil: [ :packageVersion |
-	 		self repository repository versionFromFileNamed: packageVersion 
-		]
-		ifNil: [ self lookupVersionFor: anIceSavedPackage ]
+querying
+versionFor: package 
+	^ (self ownVersionFor: package)
+		ifNil: [ self lookupVersionFor: package ]

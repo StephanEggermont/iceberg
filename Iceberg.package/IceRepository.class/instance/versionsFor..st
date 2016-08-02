@@ -1,3 +1,3 @@
-versions handling
+private
 versionsFor: package
-	^ self allVersionDescriptors select: [ :version | version packageName = package packageName ]
+	^ self currentBranch versionsFor: package 

@@ -1,0 +1,17 @@
+{
+	"category" : "Iceberg-Core",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "NicoPasserini 7/26/2016 00:45",
+	"instvars" : [
+		"name",
+		"repository",
+		"versionDictionary",
+		"commitDictionary" ],
+	"name" : "IceBranch",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

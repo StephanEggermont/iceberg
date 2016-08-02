@@ -1,13 +1,13 @@
 tests
 testLoadCommit
-	| latestVersionNumber commit | 
+	| commit | 
 	"1. - Preparation: have an incomming commit which does not have versions for all loaded packages"
 	"1.1 - Commit a new version of some package"
 	repository loadPackage: packageName.
 	self saveNewVersion.
 
 	"1.2 - Remove the modified package"
-	self removeTestPackage.
+	self removeTestPackages.
 
 	"1.3 - Checkout and load the previous version"
 	repository checkoutBranch: 'master^1'.
